@@ -51,3 +51,38 @@ export const categories = [
     title: "JACKETS",
   },
 ];
+
+export const popularProducts = [
+  {
+    id: 1,
+    img: images.product1,
+  },
+  {
+    id: 2,
+    img: images.product2,
+  },
+  {
+    id: 3,
+    img: images.product3,
+  },
+  {
+    id: 4,
+    img: images.product4,
+  },
+  {
+    id: 5,
+    img: images.product5,
+  },
+  {
+    id: 6,
+    img: images.product6,
+  },
+  {
+    id: 7,
+    img: images.product7,
+  },
+  {
+    id: 8,
+    img: images.product8,
+  },
+];

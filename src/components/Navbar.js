@@ -23,7 +23,15 @@ const NavbarLeft = styled.div`
 const Logo = styled.h1`
   font-size: 16px;
   font-weight: 500;
+`;
+
+const Link = styled.a`
+  text-decoration: none;
   color: #ff6b81;
+  cursor: pointer;
+  &:hover {
+    color: #ff4757;
+  }
 `;
 
 const NavbarCenter = styled.div`
@@ -45,6 +53,15 @@ const Input = styled.input`
   outline: none;
   font-size: 14px;
 `;
+const Icon = styled.div`
+  display: flex;
+  align-items: center;
+  color: #747d8c;
+  font-size: 20px;
+  &:hover {
+    color: #ff6b81;
+  }
+`;
 
 const NavbarRight = styled.div`
   display: flex;
@@ -56,12 +73,22 @@ const NavbarRight = styled.div`
 
 const NavLanguage = styled.span`
   font-size: 14px;
+  font-weight: 500;
   cursor: pointer;
+  padding: 0px 5px;
+  color: #57606f;
 `;
 
 const NavItem = styled.div`
   font-size: 14px;
+  font-weight: 500;
+  color: #57606f;
   cursor: pointer;
+  margin-left: 15px;
+  padding: 0px 5px;
+  &:hover {
+    color: #ff6b81;
+  }
 `;
 
 function Navbar() {
@@ -69,18 +96,20 @@ function Navbar() {
     <NavbarContainer>
       <NavbarWrapper>
         <NavbarLeft>
-          <Logo>E-COMMERCE APP</Logo>
+          <Logo>
+            <Link href="/">E-COMMERCE APP</Link>
+          </Logo>
         </NavbarLeft>
         <NavbarCenter>
           <NavSearchContainer>
             <Input />
-            <SearchOutlinedIcon
-              style={{ color: "#747d8c", fontSize: "20px" }}
-            />
+            <Icon>
+              <SearchOutlinedIcon />
+            </Icon>
           </NavSearchContainer>
         </NavbarCenter>
         <NavbarRight>
-          <NavLanguage>ENG</NavLanguage>
+          <NavLanguage>EN</NavLanguage>
           <NavItem>Sign Up</NavItem>
           <NavItem>Sign In</NavItem>
           <NavItem>

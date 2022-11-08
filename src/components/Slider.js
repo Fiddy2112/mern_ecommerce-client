@@ -79,6 +79,11 @@ const SlideButton = styled.button`
   background-color: #fff;
   font-size: 16px;
   cursor: pointer;
+
+  &:hover {
+    background-color: ${(props) => props.color};
+    color: #fff;
+  }
 `;
 
 function Slider() {

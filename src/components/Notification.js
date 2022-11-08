@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 const Container = styled.div`
-  height: 30px;
+  height: 35px;
   background-color: #70a1ff;
   color: #fff;
   align-items: center;
