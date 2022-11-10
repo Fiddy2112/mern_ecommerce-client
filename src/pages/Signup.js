@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { mobile } from "../responsive";
 
 const Container = styled.div`
   width: 100vw;
@@ -14,12 +15,15 @@ const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+
+  ${mobile({ width: "100%" })}
 `;
 const Wrapper = styled.div`
   width: 40%;
   padding: 20px;
   background-color: #fff;
   border-radius: 5px;
+  ${mobile({ width: "80%" })}
 `;
 const Title = styled.h1`
   font-size: 30px;
@@ -48,6 +52,7 @@ const Input = styled.input`
   padding: 10px 8px;
   outline: none;
   border: 0.5px solid #a4b0be;
+  ${mobile({ width: "100%" })}
 
   &:focus {
     border: 0.5px solid #1e90ff;
@@ -58,10 +63,12 @@ const InputBox = styled.input`
   width: 20px;
   height: 20px;
   margin: 5px;
+  ${mobile({ width: "15px", height: "15px" })}
 `;
 const Agreement = styled.span`
   font-size: 14px;
   color: #2f3542;
+  ${mobile({ fontSize: "12px" })}
 `;
 
 const CheckBox = styled.div`
@@ -72,12 +79,14 @@ const CheckBox = styled.div`
 const Desc = styled.span`
   font-size: 12px;
   color: #57606f;
+  ${mobile({ fontSize: "10px" })}
 `;
 
 const ButtonContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  ${mobile({ justifyContent: "center", flexDirection: "column" })}
 `;
 
 const Button = styled.button`
@@ -96,6 +105,8 @@ const Button = styled.button`
     color: #fff;
     background-color: #ff6b81;
   }
+
+  ${mobile({ marginBottom: "10px", fontSize: "12px" })}
 `;
 
 const LinkContainer = styled.div`

@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { mobile } from "../responsive";
 
 const Container = styled.div`
   width: 100vw;
@@ -14,6 +15,8 @@ const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+
+  ${mobile({ height: "100%" })}
 `;
 const Wrapper = styled.div`
   width: 80%;
@@ -21,11 +24,13 @@ const Wrapper = styled.div`
   background-color: #fff;
   border-radius: 5px;
   display: flex;
+  ${mobile({ flexDirection: "column" })}
 `;
 const Title = styled.h1`
   font-size: 30px;
   font-weight: 400;
   color: #2f3542;
+  ${mobile({ fontSize: "20px" })}
 `;
 const Form = styled.form`
   flex: 1;
@@ -55,6 +60,8 @@ const Input = styled.input`
     border: 0.5px solid #1e90ff;
     // border: 0.5px solid #ff6b81;
   }
+
+  ${mobile({ width: "100%" })}
 `;
 
 const Link = styled.a`
@@ -66,7 +73,6 @@ const Link = styled.a`
 const Button = styled.button`
   // flex: 2;
   width: 50%;
-  // margin: auto;
   border: 0.5px solid #ff6b81;
   outline: none;
   color: #ff6b81;
@@ -80,6 +86,8 @@ const Button = styled.button`
     color: #fff;
     background-color: #ff6b81;
   }
+
+  ${mobile({ margin: "auto", width: "auto" })}
 `;
 
 const TitleContainer = styled.div`
@@ -89,12 +97,18 @@ const TitleContainer = styled.div`
   flex-direction: column;
   align-items: center;
   border-left: 0.5px solid #ced6e0;
+  ${mobile({
+    marginTop: "20px",
+    borderTop: "0.5px solid #ced6e0",
+    borderLeft: "none",
+  })}
 `;
 const Desc = styled.div`
   font-size: 18px;
   font-weight: 300;
   color: #57606f;
   margin: 20px 10px;
+  ${mobile({ fontSize: "14px" })}
 `;
 
 function Login() {

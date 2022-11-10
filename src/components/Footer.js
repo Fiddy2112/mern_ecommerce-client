@@ -6,6 +6,7 @@ import TwitterIcon from "@mui/icons-material/Twitter";
 import YouTubeIcon from "@mui/icons-material/YouTube";
 import PhoneIphoneOutlinedIcon from "@mui/icons-material/PhoneIphoneOutlined";
 import LocationOnOutlinedIcon from "@mui/icons-material/LocationOnOutlined";
+import { mobile } from "../responsive";
 
 const FooterContainer = styled.div`
   padding: 20px;
@@ -13,6 +14,10 @@ const FooterContainer = styled.div`
 `;
 const FooterTop = styled.div`
   padding-bottom: 20px;
+  @media only screen and (max-width: 768px) {
+    padding: 20px;
+    text-align: center;
+  } ;
 `;
 
 const Logo = styled.h1`
@@ -34,11 +39,18 @@ const List = styled.ul`
   align-items: flex-start;
   justify-content: space-evenly;
   list-style: none;
+
+  ${mobile({
+    alignItems: "center",
+    flexDirection: "column",
+    justifyContent: "center",
+  })}
 `;
 const ListItem = styled.li`
   display: flex;
   align-items: center;
   flex-direction: column;
+  ${mobile({ marginBottom: "20px" })}
 `;
 const Title = styled.p`
   font-size: 16px;

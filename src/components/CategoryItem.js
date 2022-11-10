@@ -1,10 +1,13 @@
 import React from "react";
 import styled from "styled-components";
+import { mobile } from "../responsive";
 
 const CgIContainer = styled.div`
   flex: 1;
   margin: 30px;
   position: relative;
+
+  ${mobile({ width: "60%" })}
 `;
 
 const CgImg = styled.img`
@@ -21,6 +24,7 @@ const CgInfo = styled.div`
 const CgTitle = styled.h1`
   color: #2f3542;
   margin-bottom: 10px;
+  ${mobile({ fontSize: "20px" })}
 `;
 
 const CgButton = styled.button`
@@ -38,6 +42,8 @@ const CgButton = styled.button`
     background-color: #fff;
     color: #57606f;
   }
+
+  ${mobile({ fontSize: "10px" })}
 `;
 
 function CategoryItem({ item }) {

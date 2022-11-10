@@ -18,11 +18,18 @@ const Title = styled.h1`
   margin-bottom: 10px;
 `;
 
+const Carts = styled.div`
+  display: flex;
+  flex-direction: column;
+  flex: 2;
+`;
+
 const CartList = styled.div`
   flex: 2;
   display: flex;
   align-content: center;
   justify-content: space-between;
+  margin-bottom: 30px;
 `;
 const CartItem = styled.div`
   display: flex;
@@ -130,31 +137,37 @@ const Total = styled.div`
   background-color: #f1f2f6;
   border-radius: 5px;
 `;
-const TitleTotal = styled.div``;
-const TitleAmount = styled.h3`
+const Summary = styled.div``;
+const SummaryTitle = styled.h3`
   padding-bottom: 20px;
-  border-bottom: 0.5px solid #a4b0be;
+  border-bottom: 0.5px solid #ced6e0;
 `;
 
-const TitlePrice = styled.h3`
-  padding-top: 20px;
-  border-top: 0.5px solid #a4b0be;
-`;
-
-const ItemAmount = styled.div`
+const SummaryItem = styled.div`
   display: flex;
-  flex-direction: column;
-  gap: 20px;
-  margin: 20px 0px;
+  justify-content: space-between;
+  padding: 10px 0px;
+  color: #57606f;
 `;
-const Item = styled.span`
+
+const SummaryText = styled.span`
   font-size: 15px;
   font-weight: 400;
-  color: #57606f;
+`;
+
+const SummaryPrice = styled.span`
+  font-size: 15px;
+  font-weight: 400;
+`;
+
+const SummaryTotal = styled.h3`
+  padding-top: 20px;
+  border-top: 0.5px solid #ced6e0;
 `;
 
 const Desc = styled.p`
   margin: 20px;
+  font-size: 14px;
   font-weight: 400;
   color: #2f3542;
 `;
@@ -179,127 +192,143 @@ function Cart() {
       <Navbar />
       <Title>Shopping cart</Title>
       <Wrapper>
-        <CartList>
-          <CartItem>
-            <Img src="https://image.uniqlo.com/UQ/ST3/us/imagesgoods/449890/item/usgoods_69_449890.jpg?width=320" />
-            <CartInfo>
-              <CartTitle>Wool Cashmere Chesterfield Coat</CartTitle>
-              <CartDesc>
-                <CartProduct>Product ID: 449890</CartProduct>
-                <CartColor>Color: 69 navay</CartColor>
-                <CartSize>Size: Unisex M</CartSize>
-                <CartPrice>$199.90</CartPrice>
-              </CartDesc>
-              <Button>Remove</Button>
-            </CartInfo>
-          </CartItem>
-          <CartAmount>
-            <FilterText>
-              Quantity
-              <Select>
-                <Option>1</Option>
-                <Option>2</Option>
-                <Option>3</Option>
-                <Option>4</Option>
-                <Option>5</Option>
-                <Option>6</Option>
-                <Option>7</Option>
-                <Option>8</Option>
-                <Option>9</Option>
-                <Option>10</Option>
-              </Select>
-            </FilterText>
+        <Carts>
+          <CartList>
+            <CartItem>
+              <Img src="https://image.uniqlo.com/UQ/ST3/us/imagesgoods/449890/item/usgoods_69_449890.jpg?width=320" />
+              <CartInfo>
+                <CartTitle>Wool Cashmere Chesterfield Coat</CartTitle>
+                <CartDesc>
+                  <CartProduct>Product ID: 449890</CartProduct>
+                  <CartColor>Color: 69 navay</CartColor>
+                  <CartSize>Size: Unisex M</CartSize>
+                  <CartPrice>$199.90</CartPrice>
+                </CartDesc>
+                <Button>Remove</Button>
+              </CartInfo>
+            </CartItem>
+            <CartAmount>
+              <FilterText>
+                Quantity
+                <Select>
+                  <Option>1</Option>
+                  <Option>2</Option>
+                  <Option>3</Option>
+                  <Option>4</Option>
+                  <Option>5</Option>
+                  <Option>6</Option>
+                  <Option>7</Option>
+                  <Option>8</Option>
+                  <Option>9</Option>
+                  <Option>10</Option>
+                </Select>
+              </FilterText>
 
-            <AmountProduct>
-              Subtotal:<Amount>$199.90</Amount>
-            </AmountProduct>
-          </CartAmount>
-        </CartList>
+              <AmountProduct>
+                Subtotal:<Amount>$199.90</Amount>
+              </AmountProduct>
+            </CartAmount>
+          </CartList>
 
-        <CartList>
-          <CartItem>
-            <Img src="https://image.uniqlo.com/UQ/ST3/us/imagesgoods/449890/item/usgoods_69_449890.jpg?width=320" />
-            <CartInfo>
-              <CartTitle>Wool Cashmere Chesterfield Coat</CartTitle>
-              <CartDesc>
-                <CartProduct>Product ID: 449890</CartProduct>
-                <CartColor>Color: 69 navay</CartColor>
-                <CartSize>Size: Unisex M</CartSize>
-                <CartPrice>$199.90</CartPrice>
-              </CartDesc>
-              <Button>Remove</Button>
-            </CartInfo>
-          </CartItem>
-          <CartAmount>
-            <FilterText>
-              Quantity
-              <Select>
-                <Option>1</Option>
-                <Option>2</Option>
-                <Option>3</Option>
-                <Option>4</Option>
-                <Option>5</Option>
-                <Option>6</Option>
-                <Option>7</Option>
-                <Option>8</Option>
-                <Option>9</Option>
-                <Option>10</Option>
-              </Select>
-            </FilterText>
+          <CartList>
+            <CartItem>
+              <Img src="https://image.uniqlo.com/UQ/ST3/us/imagesgoods/449890/item/usgoods_69_449890.jpg?width=320" />
+              <CartInfo>
+                <CartTitle>Wool Cashmere Chesterfield Coat</CartTitle>
+                <CartDesc>
+                  <CartProduct>Product ID: 449890</CartProduct>
+                  <CartColor>Color: 69 navay</CartColor>
+                  <CartSize>Size: Unisex M</CartSize>
+                  <CartPrice>$199.90</CartPrice>
+                </CartDesc>
+                <Button>Remove</Button>
+              </CartInfo>
+            </CartItem>
+            <CartAmount>
+              <FilterText>
+                Quantity
+                <Select>
+                  <Option>1</Option>
+                  <Option>2</Option>
+                  <Option>3</Option>
+                  <Option>4</Option>
+                  <Option>5</Option>
+                  <Option>6</Option>
+                  <Option>7</Option>
+                  <Option>8</Option>
+                  <Option>9</Option>
+                  <Option>10</Option>
+                </Select>
+              </FilterText>
 
-            <AmountProduct>
-              Subtotal:<Amount>$199.90</Amount>
-            </AmountProduct>
-          </CartAmount>
-        </CartList>
+              <AmountProduct>
+                Subtotal:<Amount>$199.90</Amount>
+              </AmountProduct>
+            </CartAmount>
+          </CartList>
 
-        <CartList>
-          <CartItem>
-            <Img src="https://image.uniqlo.com/UQ/ST3/us/imagesgoods/449890/item/usgoods_69_449890.jpg?width=320" />
-            <CartInfo>
-              <CartTitle>Wool Cashmere Chesterfield Coat</CartTitle>
-              <CartDesc>
-                <CartProduct>Product ID: 449890</CartProduct>
-                <CartColor>Color: 69 navay</CartColor>
-                <CartSize>Size: Unisex M</CartSize>
-                <CartPrice>$199.90</CartPrice>
-              </CartDesc>
-              <Button>Remove</Button>
-            </CartInfo>
-          </CartItem>
-          <CartAmount>
-            <FilterText>
-              Quantity
-              <Select>
-                <Option>1</Option>
-                <Option>2</Option>
-                <Option>3</Option>
-                <Option>4</Option>
-                <Option>5</Option>
-                <Option>6</Option>
-                <Option>7</Option>
-                <Option>8</Option>
-                <Option>9</Option>
-                <Option>10</Option>
-              </Select>
-            </FilterText>
+          <CartList>
+            <CartItem>
+              <Img src="https://image.uniqlo.com/UQ/ST3/us/imagesgoods/449890/item/usgoods_69_449890.jpg?width=320" />
+              <CartInfo>
+                <CartTitle>Wool Cashmere Chesterfield Coat</CartTitle>
+                <CartDesc>
+                  <CartProduct>Product ID: 449890</CartProduct>
+                  <CartColor>Color: 69 navay</CartColor>
+                  <CartSize>Size: Unisex M</CartSize>
+                  <CartPrice>$199.90</CartPrice>
+                </CartDesc>
+                <Button>Remove</Button>
+              </CartInfo>
+            </CartItem>
+            <CartAmount>
+              <FilterText>
+                Quantity
+                <Select>
+                  <Option>1</Option>
+                  <Option>2</Option>
+                  <Option>3</Option>
+                  <Option>4</Option>
+                  <Option>5</Option>
+                  <Option>6</Option>
+                  <Option>7</Option>
+                  <Option>8</Option>
+                  <Option>9</Option>
+                  <Option>10</Option>
+                </Select>
+              </FilterText>
 
-            <AmountProduct>
-              Subtotal:<Amount>$199.90</Amount>
-            </AmountProduct>
-          </CartAmount>
-        </CartList>
+              <AmountProduct>
+                Subtotal:<Amount>$199.90</Amount>
+              </AmountProduct>
+            </CartAmount>
+          </CartList>
+        </Carts>
         <TotalAmount>
           <Total>
-            <TitleTotal>
-              <TitleAmount>Order summary</TitleAmount>
-              <ItemAmount>
-                <Item>Item(s) subtotal</Item>
-                <Item>Item(s) subtotal</Item>
-                <Item>Item(s) subtotal</Item>
-              </ItemAmount>
-              <TitlePrice>Order summary</TitlePrice>
-            </TitleTotal>
+            <Summary>
+              <SummaryTitle>Order summary</SummaryTitle>
+              <SummaryItem>
+                <SummaryText>Subtotal</SummaryText>
+                <SummaryPrice>$199.90</SummaryPrice>
+              </SummaryItem>
+
+              <SummaryItem>
+                <SummaryText>Shipping</SummaryText>
+                <SummaryPrice>GHN</SummaryPrice>
+              </SummaryItem>
+
+              <SummaryItem>
+                <SummaryText>Estimated Shipping</SummaryText>
+                <SummaryPrice>$4.50</SummaryPrice>
+              </SummaryItem>
+
+              <SummaryItem>
+                <SummaryText>Shipping Discount</SummaryText>
+                <SummaryPrice>$ -4.50</SummaryPrice>
+              </SummaryItem>
+              <SummaryTotal>Order total: $199.90</SummaryTotal>
+            </Summary>
           </Total>
           <Desc>
             Your order qualifies for free standard shipping. Click "Checkout" to

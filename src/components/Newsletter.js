@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import SendOutlinedIcon from "@mui/icons-material/SendOutlined";
+import { mobile } from "../responsive";
 
 const NlContainer = styled.div`
   height: 60vh;
@@ -8,16 +9,27 @@ const NlContainer = styled.div`
   align-items: center;
   justify-content: center;
   flex-direction: column;
+
+  @media only screen and (max-width: 768px) {
+    height: 50vh;
+  }
+
+  ${mobile({ height: "45vh" })}
 `;
 const NlTitle = styled.h1`
   font-size: 70px;
   color: #2f3542;
   margin: 20px;
+
+  ${mobile({ fontSize: "50px" })}
 `;
+
 const NlDesc = styled.p`
   font-size: 18px;
   font-weight: 500;
   color: #57606f;
+
+  ${mobile({ fontSize: "14px", textAlign: "center" })}
 `;
 const NlInputContainer = styled.div`
   width: 50%;
@@ -26,6 +38,8 @@ const NlInputContainer = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  ${mobile({ width: "65%" })}
 `;
 const NlInput = styled.input`
   flex: 8;

@@ -6,11 +6,13 @@ import Newsletter from "../components/Newsletter";
 import Notification from "../components/Notification";
 import AddCircleOutlineOutlinedIcon from "@mui/icons-material/AddCircleOutlineOutlined";
 import RemoveCircleOutlineOutlinedIcon from "@mui/icons-material/RemoveCircleOutlineOutlined";
+import { mobile } from "../responsive";
 
 const PContainer = styled.div``;
 const Wrapper = styled.div`
   display: flex;
   padding: 50px;
+  ${mobile({ flexDirection: "column" })}
 `;
 const ImgContainer = styled.div`
   flex: 1;
@@ -23,21 +25,25 @@ const ImgProduct = styled.img`
 const InfoContainer = styled.div`
   flex: 1;
   padding: 0px 50px;
+  ${mobile({ padding: "20px" })}
 `;
 const Tile = styled.h1`
   font-weight: 500;
   color: #2f3542;
+  ${mobile({ fontSize: "20px" })}
 `;
 const Desc = styled.p`
   padding: 20px 0px;
   font-size: 16px;
   font-weight: 400;
   color: #747d8c;
+  ${mobile({ fontSize: "15px" })}
 `;
 const Price = styled.span`
   font-size: 50px;
   font-weight: 400;
   color: #ff6b81;
+  ${mobile({ fontSize: "40px" })}
 `;
 
 const FilterContainer = styled.div`
